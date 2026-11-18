@@ -20,8 +20,13 @@ is in diagnoses (D), past history (H) or medications (M). Hospitals 1 and 2 spre
 
 $$\mathrm{DAS}_c(i,j) = \arccos\left(\frac{d_{i,c}\cdot d_{j,c}}{\lVert d_{i,c}\rVert\,\lVert d_{j,c}\rVert}\right)$$
 
-DAS runs from 0° (the same spread of evidence) to 90° (no lobe in common). Mean DAS averages the condition angles over
-the conditions both hospitals have. It is the main measure in the paper.
+DAS runs from 0° (the same spread of evidence) to 90° (no lobe in common).
+
+4. Mean DAS, the main measure in the paper, averages the condition angles over the conditions both hospitals have:
+
+$$\overline{\mathrm{DAS}}(i,j) = \frac{1}{|C_{ij}|}\sum_{c \in C_{ij}} \mathrm{DAS}_c(i,j)$$
+
+where $C_{ij}$ is the set of conditions with a DAS at both hospitals.
 
 Because the angle does not depend on scale, a site can share its seven counts per condition instead of shares.
 
