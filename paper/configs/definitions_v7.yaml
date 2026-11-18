@@ -1,0 +1,85 @@
+rowlevel_v7: /path/to/rowlevel
+
+conditions:
+  diabetes:
+    name: diabetes mellitus (all types)
+    eicu_diagnosis:
+      include:
+        - {pattern: "diabetes mellitus", reason: "diabetes mellitus, any type"}
+        - {pattern: "diabetic|from diabetes", reason: "complication that names diabetes"}
+        - {pattern: "\\bdka\\b", reason: "diabetic ketoacidosis (label carries a diabetes ICD code)"}
+        - {pattern: "hyperosmolar nonketotic", reason: "hyperosmolar state, occurs only in diabetes"}
+      exclude:
+        - {pattern: "gestational", reason: "pregnancy-specific"}
+      notes:
+        - {pattern: "insipidus", reason: "diabetes insipidus is a different disease"}
+    eicu_history_path:
+      include:
+        - {pattern: "/insulin dependent diabetes/", reason: "insulin-dependent diabetes"}
+        - {pattern: "/non-insulin dependent diabetes/", reason: "non-insulin-dependent diabetes (medication or diet)"}
+    mimic_icd: {icd9: "^(249|250)", icd10: "^(E08|E09|E10|E11|E13)"}
+    mimic_history: {exclude_remove: ["type 1", "T1DM", "IDDM"], exclude_add: ["insipidus"]}
+    medication:
+      remove: [bromocriptine, cycloset, colesevelam, welchol]
+      name_exclude: "insulin syringe|pen needle|insulin admin|hyperkal"
+      add: [janumet, glucovance, actoplus, fortamet, jentadueto, kombiglyze, metaglip, duetact, avandamet, invokamet, xigduo, synjardy, glyxambi]
+  hypertension:
+    name: chronic hypertension
+    eicu_diagnosis:
+      include:
+        - {pattern: "hypertension|hypertensive|high blood pressure", reason: "hypertension stated"}
+      exclude:
+        - {pattern: "pulmonary hypertension|intracranial hypertension|portal hypertension|ocular hypertension", reason: "not systemic hypertension"}
+        - {pattern: "pregnan|eclampsia", reason: "pregnancy-specific hypertension"}
+        - {pattern: "hemorrhagic stroke\\|hypertensive", reason: "stroke diagnosis; hypertension not recorded as a condition"}
+        - {pattern: "reflex hypertension", reason: "reflex response to raised intracranial pressure, not chronic hypertension"}
+    eicu_history_path:
+      include:
+        - {pattern: "/hypertension requiring treatment/", reason: "hypertension requiring treatment"}
+    mimic_icd: {icd9: "^(401|402|403|404|405)", icd10: "^(I10|I11|I12|I13|I15|I16)"}
+    mimic_history: {}
+    medication:
+      remove: [furosemide, lasix, bumetanide, bumex, torsemide, demadex, metolazone, zaroxolyn]
+      add: [hyzaar, zestoretic, prinzide, maxzide, dyazide, nifedical, nifediac, lotrel, cartia, dilt-xr, dilt-cd, diltia, tiazac, dilacor, taztia, matzim, azor, exforge, aldactazide, ziac, bidil,
+            caduet, avalide, intuniv, tenoretic, verelan]
+  chf:
+    name: heart failure
+    eicu_diagnosis:
+      include:
+        - {pattern: "heart failure|\\bchf\\b", reason: "heart failure stated"}
+        - {pattern: "acute pulmonary edema\\|due to (?:left ventricular dysfunction|myocardial ischemia or infarction|valvular disease|hypertension|malignant hypertension|myocarditis)", reason: "pulmonary edema with a cardiac cause"}
+      exclude:
+        - {pattern: "not due to chf|without chf|absence of chf|absence of renal failure and chf|unassociated with chf", reason: "label states heart failure is absent"}
+        - {pattern: "cor pulmonale", reason: "cor pulmonale alone is not counted"}
+      notes:
+        - {pattern: "cardiomyopathy", reason: "cardiomyopathy without heart failure stated"}
+        - {pattern: "acute pulmonary edema", reason: "pulmonary edema without a cardiac cause named"}
+        - {pattern: "low cardiac output", reason: "low cardiac output alone does not establish heart failure"}
+        - {pattern: "hypertension\\|with renal failure", reason: "label names renal failure; the attached heart-failure code is a mapping error"}
+    eicu_history_path:
+      include:
+        - {pattern: "/congestive heart failure/", reason: "congestive heart failure"}
+    mimic_icd: {icd9: "^(428|39891|40201|40211|40291|40401|40403|40411|40413|40491|40493)", icd10: "^(I50|I110|I130|I132|I0981)"}
+    mimic_history: {include_remove: ["cardiomyopathy"]}
+    medication:
+      remove: [hydralazine, isosorbide dinitrate]
+      combination:
+        name: hydralazine with isosorbide dinitrate
+        a: {terms: [hydralazine, apresoline], hicl: [89]}
+        b: {terms: [isosorbide dinitrate, isordil, dilatrate], hicl: [166]}
+      add: [prinivil, zestril, cozaar, diovan, vasotec, hyzaar, altace, zestoretic, prinzide, avapro, accupril, atacand, exforge, aldactazide, ziac, avalide, mavik,
+            aceon, monopril, digox, digitek]
+  af:
+    name: atrial fibrillation or flutter
+    eicu_diagnosis:
+      include:
+        - {pattern: "atrial fibrillation|atrial flutter|\\bafib\\b|a-fib", reason: "atrial fibrillation or flutter stated"}
+      exclude: []
+    eicu_history_path:
+      include:
+        - {pattern: "/atrial fibrillation", reason: "atrial fibrillation, chronic or intermittent"}
+    mimic_icd: {icd9: "^(42731|42732)", icd10: "^I48"}
+    mimic_history: {}
+    medication:
+      remove: [heparin, enoxaparin, lovenox, rhythmol]
+      add: [coreg, nexterone, tenormin, inderal, cartia, dilt-xr, dilt-cd, diltia, tiazac, dilacor, taztia, matzim, zebeta, ziac, rythmol, sorine, digox, digitek, tenoretic, verelan]

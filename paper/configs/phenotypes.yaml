@@ -1,0 +1,303 @@
+diabetes:
+  diagnosis:
+    include: ["diabetes", "diabetic", "T2DM", "type 2 diabetes", "DM type 2",
+              "DM type II", "NIDDM"]
+    exclude: ["type 1", "T1DM", "IDDM", "gestational"]
+  past_history:
+    include: ["diabetes", "diabetic", "T2DM", "type 2 diabetes",
+              "DM type 2", "DM type II", "NIDDM"]
+    exclude: ["type 1", "T1DM", "IDDM", "gestational"]
+  medication:
+    include:
+      - metformin
+      - glucophage
+      - riomet
+      - glumetza
+      - glipizide
+      - glucotrol
+      - glyburide
+      - glynase
+      - diabeta
+      - micronase
+      - glimepiride
+      - amaryl
+      - sulfonylurea
+      - repaglinide
+      - prandin
+      - nateglinide
+      - starlix
+      - pioglitazone
+      - actos
+      - rosiglitazone
+      - avandia
+      - sitagliptin
+      - januvia
+      - saxagliptin
+      - onglyza
+      - linagliptin
+      - tradjenta
+      - alogliptin
+      - nesina
+      - exenatide
+      - byetta
+      - bydureon
+      - liraglutide
+      - victoza
+      - dulaglutide
+      - trulicity
+      - semaglutide
+      - ozempic
+      - rybelsus
+      - lixisenatide
+      - adlyxin
+      - canagliflozin
+      - invokana
+      - dapagliflozin
+      - farxiga
+      - empagliflozin
+      - jardiance
+      - ertugliflozin
+      - steglatro
+      - acarbose
+      - precose
+      - miglitol
+      - glyset
+      - colesevelam
+      - welchol
+      - bromocriptine
+      - cycloset
+      - insulin
+      - lantus
+      - levemir
+      - tresiba
+      - toujeo
+      - basaglar
+      - humalog
+      - novolog
+      - apidra
+      - humulin
+      - novolin
+      - admelog
+      - fiasp
+
+hypertension:
+  diagnosis:
+    include: ["hypertension", "high blood pressure", "htn", "hypertensive"]
+    exclude: ["pulmonary hypertension", "intracranial hypertension",
+              "portal hypertension", "ocular hypertension"]
+  past_history:
+    include: ["hypertension", "high blood pressure", "htn", "hypertensive"]
+    exclude: ["pulmonary hypertension", "intracranial hypertension"]
+  medication:
+    include:
+      - lisinopril
+      - prinivil
+      - zestril
+      - enalapril
+      - vasotec
+      - ramipril
+      - altace
+      - benazepril
+      - lotensin
+      - captopril
+      - capoten
+      - fosinopril
+      - monopril
+      - quinapril
+      - accupril
+      - perindopril
+      - aceon
+      - trandolapril
+      - mavik
+      - moexipril
+      - losartan
+      - cozaar
+      - valsartan
+      - diovan
+      - irbesartan
+      - avapro
+      - candesartan
+      - atacand
+      - olmesartan
+      - benicar
+      - telmisartan
+      - micardis
+      - azilsartan
+      - edarbi
+      - amlodipine
+      - norvasc
+      - nifedipine
+      - procardia
+      - adalat
+      - diltiazem
+      - cardizem
+      - verapamil
+      - calan
+      - isoptin
+      - felodipine
+      - plendil
+      - nicardipine
+      - cardene
+      - nisoldipine
+      - sular
+      - clevidipine
+      - cleviprex
+      - metoprolol
+      - lopressor
+      - toprol
+      - atenolol
+      - tenormin
+      - propranolol
+      - inderal
+      - carvedilol
+      - coreg
+      - bisoprolol
+      - zebeta
+      - labetalol
+      - trandate
+      - nebivolol
+      - bystolic
+      - nadolol
+      - corgard
+      - hydrochlorothiazide
+      - hctz
+      - microzide
+      - chlorthalidone
+      - thalitone
+      - indapamide
+      - lozol
+      - metolazone
+      - zaroxolyn
+      - furosemide
+      - lasix
+      - bumetanide
+      - bumex
+      - torsemide
+      - demadex
+      - spironolactone
+      - aldactone
+      - eplerenone
+      - inspra
+      - amiloride
+      - triamterene
+      - dyrenium
+      - doxazosin
+      - cardura
+      - prazosin
+      - minipress
+      - terazosin
+      - hytrin
+      - clonidine
+      - catapres
+      - methyldopa
+      - aldomet
+      - guanfacine
+      - tenex
+      - hydralazine
+      - apresoline
+      - minoxidil
+      - aliskiren
+      - tekturna
+
+chf:
+  diagnosis:
+    include: ["heart failure", "congestive heart failure", "chf",
+              "cardiomyopathy", "reduced ejection fraction", "HFrEF",
+              "HFpEF", "systolic dysfunction"]
+    exclude: ["right heart failure"]
+  past_history:
+    include: ["heart failure", "congestive heart failure", "chf",
+              "cardiomyopathy"]
+  medication:
+    include:
+      - lisinopril
+      - enalapril
+      - ramipril
+      - captopril
+      - fosinopril
+      - quinapril
+      - perindopril
+      - trandolapril
+      - losartan
+      - valsartan
+      - candesartan
+      - irbesartan
+      - sacubitril
+      - entresto
+      - carvedilol
+      - coreg
+      - metoprolol succinate
+      - toprol
+      - bisoprolol
+      - zebeta
+      - spironolactone
+      - aldactone
+      - eplerenone
+      - inspra
+      - furosemide
+      - lasix
+      - bumetanide
+      - bumex
+      - torsemide
+      - demadex
+      - dapagliflozin
+      - farxiga
+      - empagliflozin
+      - jardiance
+      - digoxin
+      - lanoxin
+      - hydralazine
+      - isosorbide dinitrate
+      - bidil
+      - ivabradine
+      - corlanor
+
+af:
+  diagnosis:
+    include: ["atrial fibrillation", "atrial flutter", "afib", "a-fib",
+              "a fib", "AF/A Flutter"]
+  past_history:
+    include: ["atrial fibrillation", "atrial flutter", "afib", "a-fib",
+              "a fib"]
+  medication:
+    include:
+      - metoprolol
+      - lopressor
+      - toprol
+      - atenolol
+      - propranolol
+      - carvedilol
+      - bisoprolol
+      - diltiazem
+      - cardizem
+      - verapamil
+      - calan
+      - digoxin
+      - lanoxin
+      - amiodarone
+      - cordarone
+      - pacerone
+      - flecainide
+      - tambocor
+      - propafenone
+      - rhythmol
+      - sotalol
+      - betapace
+      - dofetilide
+      - tikosyn
+      - dronedarone
+      - multaq
+      - warfarin
+      - coumadin
+      - jantoven
+      - apixaban
+      - eliquis
+      - rivaroxaban
+      - xarelto
+      - dabigatran
+      - pradaxa
+      - edoxaban
+      - savaysa
+      - enoxaparin
+      - lovenox
+      - heparin

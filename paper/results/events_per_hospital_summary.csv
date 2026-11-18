@@ -1,0 +1,11 @@
+outcome,hospitals,n,median,q25,q75,min,under_5,under_10,under_20,under_30,under_50,median_rate
+In-hospital death,all,152,33.5,15.75,78.0,0.0,5,17,49,66,93,0.082
+In-hospital death,held_out,76,34.5,14.75,76.5,0.0,2,8,27,32,47,0.085
+ICU stay over 5 days,all,152,68.5,29.0,148.25,0.0,2,6,22,39,62,0.169
+ICU stay over 5 days,held_out,76,69.5,28.0,146.25,0.0,1,4,13,20,31,0.164
+ICU stay over 7 days,all,152,40.5,15.75,86.25,0.0,6,21,45,64,89,0.101
+ICU stay over 7 days,held_out,76,38.0,13.0,82.25,0.0,4,12,24,33,45,0.09
+Hospital stay over 14 days,all,152,52.5,19.0,126.5,0.0,9,19,40,54,72,0.132
+Hospital stay over 14 days,held_out,76,55.0,16.75,127.5,0.0,6,11,25,28,34,0.132
+ICU readmission,all,152,19.5,8.0,42.25,0.0,17,49,76,94,119,0.048
+ICU readmission,held_out,76,20.5,7.0,42.25,1.0,13,26,36,45,58,0.048

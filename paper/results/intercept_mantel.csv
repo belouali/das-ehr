@@ -1,0 +1,14 @@
+sample,task,population,hospitals,spearman,p
+all,mortality,all stays,135,0.060998,0.0488
+all,A3_los_gt7d,all stays,135,0.050955,0.0899
+all,A6_hospital_los_gt14d,all stays,135,0.045379,0.1191
+all,A7_los_gt5d,all stays,135,0.061053,0.0642
+all,A3_los_gt7d,survivors,135,0.056463,0.0714
+all,A6_hospital_los_gt14d,survivors,135,0.063341,0.0535
+all,A7_los_gt5d,survivors,135,0.062252,0.058
+with_medication,mortality,all stays,117,0.017307,0.3188
+with_medication,A3_los_gt7d,all stays,117,0.022424,0.3014
+with_medication,A6_hospital_los_gt14d,all stays,117,0.053594,0.1263
+with_medication,A7_los_gt5d,all stays,117,0.057508,0.1072
+all,icu_readmit,all stays,135,-0.048692,0.9557
+with_medication,icu_readmit,all stays,117,-0.023111,0.7237

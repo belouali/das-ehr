@@ -1,0 +1,39 @@
+score:
+  - {order: 1, source: "official", rule: "eICU's official APACHE IVa score (apachePatientResult, version IVa, score above 0)", stays: 88827}
+  - {order: 2, source: "rebuilt from eICU inputs", rule: "no official score, but eICU recorded the APACHE inputs (apacheApsVar, apachePredVar): score rebuilt from them", stays: 9569}
+  - {order: 3, source: "none", rule: "no APACHE record of any kind: no score; the stay is left out of every analysis that needs the score", stays: 5855}
+rebuilt_score:
+  formula: "acute physiology points + age points + chronic-health points"
+  acute_physiology: "APACHE III point tables for 16 components: heart rate, mean blood pressure, temperature, breathing rate, oxygenation, hematocrit, white cells, creatinine, urine output, urea nitrogen, sodium, albumin, bilirubin, glucose, acid-base, coma score"
+  details_set_by_agreement_with_the_official_score:
+    - "ventilated patients get no points for a breathing rate of 6 to 13"
+    - "oxygenation uses the A-a gradient when the patient is intubated on 50% oxygen or more, otherwise PaO2"
+    - "the A-a gradient is FiO2 x 713 - PaCO2 - PaO2 (PaCO2 not divided by 0.8)"
+    - "acute renal failure (creatinine 1.5 or more, urine under 410 mL a day, no chronic dialysis) scores 10 points for creatinine"
+  age_points: {"under 45": 0, "45 to 59": 5, "60 to 64": 11, "65 to 69": 13, "70 to 74": 16, "75 to 84": 17, "85 or older": 24}
+  chronic_health_points: {aids: 23, hepatic failure: 16, lymphoma: 13, metastatic cancer: 11, leukemia or myeloma: 10, immunosuppression: 10, cirrhosis: 4}
+  chronic_health_rule: "the highest single condition counts; none after elective surgery"
+missing_measurements:
+  rule: "a missing component scores zero points (APACHE's own rule); no measurement and no whole score is imputed"
+  coma_score: "'could not be assessed because of sedation' scores zero points and is kept apart from 'not recorded'"
+  tracking: "number of missing components per stay is recorded, reported by hospital and used in a sensitivity analysis; it is not a covariate in the main models"
+validation_of_the_rebuilt_score:
+  tested_on: "88,824 stays with an official score"
+  exact_agreement: 0.994
+  spearman: 0.9997
+  mean_difference_points: -0.04
+  largest_hospital_mean_difference_points: 0.16
+rejected:
+  raw_charting_build: "building the score from first-day charting did not pass the pass mark set in advance (Spearman 0.90, median difference 5 points, no hospital systematically off): best full-score Spearman 0.89, median difference 6, 135 of 165 hospitals off by more than 5 points. Not used."
+cohort:
+  hospital_rule: "hospitals with at least 100 stays that have a score (official or rebuilt) and every model input"
+  hospitals_with_100_scored_stays: 156
+  study_hospitals: 152
+  modeled_stays: 94122
+  das: "DAS uses all eligible stays at the 152 study hospitals, with or without a score (100,781)"
+reporting:
+  - "score source is flagged per stay; main results are repeated on official scores only"
+  - "the 5,855 stays without a score are reported and compared with the included stays"
+  - "share of a hospital's stays without an official score is a hospital characteristic tested against DAS"
+comparability_limit: "eICU scores are official or rebuilt from the inputs staff entered into the APACHE module; MIMIC-IV has no APACHE module and its score is built from raw first-day charting. The raw-charting build did not reproduce official eICU scores (hospital-level differences), so the same score name does not guarantee the same measurement in the two datasets. To be stated when interpreting the external validation."
+mimic_iv: "the score is built from first-day charting with the open-source MIMIC code (derived.apsiii) plus the same age and chronic-health points (scripts/09_apache_features.py); MIMIC-IV has no official APACHE score"

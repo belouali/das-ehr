@@ -1,0 +1,8 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+*.parquet
+paper/results_v7/
+rowlevel/
+.DS_Store

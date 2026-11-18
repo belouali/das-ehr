@@ -1,0 +1,9 @@
+step,stays,hospitals
+All ICU stays in eICU,200859,208
+Age 18 or older,200234,208
+Alive and in the ICU at 24 h,132495,208
+First qualifying stay per patient,104251,208
+"APACHE IVa score, official or rebuilt",98396,208
+Every model input,96250,205
+Hospitals with at least 100 stays,94122,152
+With a DAS vector for at least one condition,91831,135

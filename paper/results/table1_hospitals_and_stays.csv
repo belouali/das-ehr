@@ -1,0 +1,25 @@
+Characteristic,All hospitals,Medication records,No medication records
+Hospitals,152,128,24
+Hospitals with a DAS measure,135 (89%),117 (91%),18 (75%)
+Region: Midwest,51 (34%),51 (40%),0 (0%)
+Region: Northeast,12 (8%),12 (9%),0 (0%)
+Region: South,44 (29%),38 (30%),6 (25%)
+Region: West,35 (23%),18 (14%),17 (71%)
+Region: unknown,10 (7%),9 (7%),1 (4%)
+Beds: <100,22 (14%),15 (12%),7 (29%)
+Beds: 100 to 249,54 (36%),47 (37%),7 (29%)
+Beds: 250 to 499,34 (22%),26 (20%),8 (33%)
+Beds: ≥500,23 (15%),22 (17%),1 (4%)
+Beds: unknown,19 (12%),18 (14%),1 (4%)
+Teaching hospital,18 (12%),18 (14%),0 (0%)
+ICU stays,"94,122","84,497","9,625"
+"ICU stays per hospital, median [IQR]","394 [201, 774]","410 [219, 868]","276 [184, 586]"
+"Age, years, median [IQR]","66 [54, 77]","66 [54, 77]","66 [54, 77]"
+"APACHE IV score, median [IQR]","53 [39, 71]","53 [39, 71]","54 [41, 71]"
+Admitted from the emergency department,"47,203 (50.2%)","41,542 (49.2%)","5,661 (58.8%)"
+Transferred from another hospital,"2,693 (2.9%)","2,577 (3.0%)",116 (1.2%)
+In-hospital death,"8,818 (9.4%)","7,783 (9.2%)","1,035 (10.8%)"
+ICU stay over 5 days,"17,717 (18.8%)","15,949 (18.9%)","1,768 (18.4%)"
+ICU stay over 7 days,"10,786 (11.5%)","9,744 (11.5%)","1,042 (10.8%)"
+Hospital stay over 14 days,"15,068 (16.0%)","13,642 (16.1%)","1,426 (14.8%)"
+ICU readmission,"4,979 (5.6%)","4,479 (5.6%)",500 (5.5%)

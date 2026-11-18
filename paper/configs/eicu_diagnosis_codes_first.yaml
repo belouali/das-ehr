@@ -1,0 +1,71 @@
+description: eICU diagnosis rule, codes-first form. A diagnosis counts when its attached ICD code is on icd_list, or its label is in added_labels, and its label is not in removed_labels. Built
+  and verified by scripts/80_dx_codes_first.py.
+conditions:
+  diabetes:
+    icd_list:
+      icd9: ^(249|250)
+      icd10: ^(E08|E09|E10|E11|E13)
+    added_labels:
+    - endocrine|glucose metabolism|diabetes mellitus
+    - endocrine|glucose metabolism|diabetes mellitus|Type I
+    - endocrine|glucose metabolism|diabetes mellitus|Type II
+    - endocrine|glucose metabolism|hyperosmolar nonketotic coma
+    - infectious diseases|skin, bone and joint infections|diabetic foot infection
+    - infectious diseases|skin, bone and joint infections|diabetic foot infection|with gangrene
+    - infectious diseases|skin, bone and joint infections|diabetic foot infection|without gangrene
+    - renal|disorder of acid base|metabolic acidosis|ketoacidosis/diabetic
+    removed_labels: []
+  hypertension:
+    icd_list:
+      icd9: ^(401|402|403|404|405)
+      icd10: ^(I10|I11|I12|I13|I15|I16)
+    added_labels:
+    - cardiovascular|vascular disorders|hypertension|renal artery stenosis
+    - surgery|acute cardiac problems|hypertension|renal artery stenosis
+    - transplant|s/p kidney transplant|hypertension - kidney transplant
+    removed_labels:
+    - neurologic|CNS mass lesions|brain herniation syndrome|with reflex hypertension
+    - neurologic|disorders of vasculature|increased intracranial pressure|with reflex hypertension
+    - neurologic|trauma - CNS|increased intracranial pressure|with reflex hypertension
+  chf:
+    icd_list:
+      icd9: ^(428|39891|40201|40211|40291|40401|40403|40411|40413|40491|40493)
+      icd10: ^(I50|I110|I130|I132|I0981)
+    added_labels:
+    - cardiovascular|infection|myocarditis|associated with CHF
+    - cardiovascular|valvular disease|valvular insufficiency|with CHF
+    - cardiovascular|valvular disease|valvular insufficiency|with CHF|acute (from anterior wall MI)
+    - cardiovascular|valvular disease|valvular insufficiency|with CHF|acute (from endocarditis)
+    - cardiovascular|valvular disease|valvular insufficiency|with CHF|chronic
+    - cardiovascular|valvular disease|valvular stenosis|with CHF
+    - cardiovascular|ventricular disorders|congestive heart failure|left-sided|EF 25-40%
+    - cardiovascular|ventricular disorders|congestive heart failure|left-sided|EF < 25%
+    - endocrine|fluids and electrolytes|hyponatremia|due to congestive heart failure
+    - pulmonary|pleural disorders|pleural effusion|due to heart failure
+    - renal|electrolyte imbalance|hyponatremia|due to congestive heart failure
+    - surgery|cardiac surgery|pleural effusion|bilateral|associated with CHF
+    - surgery|cardiac surgery|pleural effusion|left|associated with CHF
+    - surgery|cardiac surgery|pleural effusion|right|associated with CHF
+    removed_labels:
+    - cardiovascular|vascular disorders|hypertension|with renal failure
+    - cardiovascular|ventricular disorders|acute pulmonary edema
+    - cardiovascular|ventricular disorders|acute pulmonary edema|drug induced
+    - cardiovascular|ventricular disorders|acute pulmonary edema|due to renal dysfunction
+    - cardiovascular|ventricular disorders|acute pulmonary edema|post-obstructive
+    - cardiovascular|ventricular disorders|cardiomyopathy|hypertrophic|hypertensive with LVH
+    - cardiovascular|ventricular disorders|congestive heart failure|cor pulmonale
+    - cardiovascular|ventricular disorders|hypertension|with renal failure
+    - cardiovascular|ventricular disorders|low cardiac output state
+    - cardiovascular|ventricular disorders|low cardiac output state|with lactic acidosis
+    - cardiovascular|ventricular disorders|low cardiac output state|with limb ischemia
+    - cardiovascular|ventricular disorders|low cardiac output state|with renal insufficiency
+  af:
+    icd_list:
+      icd9: ^(42731|42732)
+      icd10: ^I48
+    added_labels:
+    - cardiovascular|vascular disorders|arterial thromboembolism|embolic, atrial fibrillation
+    - cardiovascular|vascular disorders|peripheral vascular ischemia|embolic, atrial fibrillation
+    - general|quality measures|atrial fibrillation treated with anticoagulants
+    - hematology|coagulation disorders|arterial thromboembolism|embolic, atrial fibrillation
+    removed_labels: []

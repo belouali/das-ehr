@@ -1,0 +1,13 @@
+sample,pair,hospitals,spearman,p
+all,diabetes vs hypertension,109,0.740244,0.0001
+all,diabetes vs chf,102,0.681633,0.0001
+all,diabetes vs af,104,0.723018,0.0001
+all,hypertension vs chf,115,0.569916,0.0001
+all,hypertension vs af,116,0.638904,0.0001
+all,chf vs af,114,0.706193,0.0001
+with_medication,diabetes vs hypertension,98,0.572187,0.0001
+with_medication,diabetes vs chf,95,0.553557,0.0001
+with_medication,diabetes vs af,96,0.605008,0.0001
+with_medication,hypertension vs chf,108,0.387151,0.0001
+with_medication,hypertension vs af,108,0.467784,0.0001
+with_medication,chf vs af,107,0.577093,0.0001

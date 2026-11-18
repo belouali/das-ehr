@@ -1,0 +1,11 @@
+task,model,hospitals,no_med_hospitals,beta,se,odds_ratio,lo,hi,p,sd,converged
+mortality,unadjusted,135,18,0.281397,0.108606,1.32498,1.070937,1.639285,0.00957,0.382085,True
+mortality,adjusted for characteristics and case mix,135,18,0.273064,0.118934,1.313984,1.040767,1.658924,0.02168,0.329444,True
+A3_los_gt7d,unadjusted,135,18,0.033357,0.121097,1.03392,0.815472,1.310886,0.782964,0.437947,True
+A3_los_gt7d,adjusted for characteristics and case mix,135,18,-0.005152,0.133962,0.994861,0.765127,1.293575,0.969322,0.383913,True
+A6_hospital_los_gt14d,unadjusted,135,18,0.022762,0.130425,1.023023,0.79226,1.321,0.861456,0.483688,True
+A6_hospital_los_gt14d,adjusted for characteristics and case mix,135,18,0.070729,0.127694,1.07329,0.83565,1.378511,0.579649,0.371961,True
+A7_los_gt5d,unadjusted,135,18,0.019704,0.105392,1.0199,0.82956,1.253912,0.851689,0.387237,True
+A7_los_gt5d,adjusted for characteristics and case mix,135,18,-0.000531,0.11581,0.999469,0.796511,1.254143,0.996341,0.337873,True
+icu_readmit,unadjusted,135,18,0.057354,0.097084,1.059031,0.875529,1.280993,0.554676,0.303622,True
+icu_readmit,adjusted for characteristics and case mix,135,18,0.049339,0.098561,1.050576,0.866029,1.27445,0.61666,0.227625,True

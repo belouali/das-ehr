@@ -1,0 +1,188 @@
+paths:
+  phenotypes: configs/phenotypes.yaml
+  phenotypes_specific: configs/phenotypes_specific_meds.yaml
+  eicu: /path/to/eicu-crd-2.0-parquet
+  mimic: /path/to/mimic-iv-2.2-parquet
+  rowlevel: /path/to/rowlevel
+  results: results_v7
+cohort:
+  min_age: 18
+  landmark_hours: 24
+split:
+  reference_fraction: 0.25
+  salt: ehrdoc-external-2026-11-05
+  reference_year_groups:
+  - 2011 - 2013
+  - 2014 - 2016
+  - 2017 - 2019
+features:
+  vital_window:
+  - 0
+  - 24
+  lab_window:
+  - -6
+  - 24
+  vitals:
+  - hr
+  - map
+  - rr
+  - temp
+  - spo2
+  - gcs
+  labs:
+  - creatinine
+  - bun
+  - sodium
+  - potassium
+  - hgb
+  - wbc
+  - platelets
+  plausible:
+    hr:
+    - 1
+    - 300
+    map:
+    - 1
+    - 300
+    rr:
+    - 1
+    - 80
+    temp:
+    - 25
+    - 45
+    spo2:
+    - 1
+    - 100
+    gcs:
+    - 3
+    - 15
+    creatinine:
+    - 0.05
+    - 30
+    bun:
+    - 0.5
+    - 300
+    sodium:
+    - 90
+    - 200
+    potassium:
+    - 0.5
+    - 15
+    hgb:
+    - 1
+    - 30
+    wbc:
+    - 0.01
+    - 500
+    platelets:
+    - 1
+    - 2000
+  eicu_labs:
+    creatinine: creatinine
+    bun: BUN
+    sodium: sodium
+    potassium: potassium
+    hgb: Hgb
+    wbc: WBC x 1000
+    platelets: platelets x 1000
+  mimic_labs:
+    creatinine:
+    - 50912
+    bun:
+    - 51006
+    sodium:
+    - 50983
+    potassium:
+    - 50971
+    hgb:
+    - 51222
+    wbc:
+    - 51301
+    - 51300
+    platelets:
+    - 51265
+  mimic_vitals:
+    hr:
+    - 220045
+    map:
+    - 220052
+    - 225312
+    - 220181
+    rr:
+    - 220210
+    - 224690
+    spo2:
+    - 220277
+    temp_c:
+    - 223762
+    temp_f:
+    - 223761
+    gcs_parts:
+    - 220739
+    - 223900
+    - 223901
+notes_history:
+  path: /path/to/mimic-iv-note-2.2/note/discharge.csv.gz
+  section_start: '(?im)^\s*(past medical history|past medical and surgical history|past medical/surgical history|pmh)\s*:'
+  section_end: '(?im)^\s*(social history|family history|physical exam|physical examination|pertinent results|brief hospital course|medications on admission|discharge medications|allergies|history of present
+    illness|chief complaint|past surgical history|psh|review of systems|admission labs|discharge diagnosis|discharge condition)\s*:'
+  max_section_chars: 4000
+  negation: \b(no|denies|denied|negative for|without|ruled out|r/o|rule out)\b
+  skip_item: "^\\s*[-*\u2022]?\\s*(family history|fhx|fh)\\b"
+  extra_include:
+    diabetes:
+    - \bDM\s*(2|II|type\s*(2|II))?\b
+    - \bDMII\b
+    - \bT2D\b
+    - \bDM\s*(1|I|type\s*(1|I))\b
+    - \b(N?IDDM|T1DM?|T2DM)\b
+    - \bDKA\b
+    hypertension:
+    - \bHTN\b
+    - \bhigh blood pressure\b
+    chf:
+    - \bHF(rEF|pEF|mrEF)?\b
+    - \b[sd]CHF\b
+    - \bsystolic heart failure\b
+    - \bdiastolic heart failure\b
+    af:
+    - \bAF\b
+    - \bPAF\b
+    - \bAFL\b
+    - \bA\.?\s?flutter\b
+    - \bA\.?\s?fib\b
+  extra_exclude:
+    diabetes:
+    - pre-?diabet
+    - insipidus
+    hypertension:
+    - pulmonary (arterial )?hypertension
+    - \bPAH\b
+    - portal hypertension
+    - intracranial hypertension
+    - ocular hypertension
+    - pre-?eclampsia
+    - gestational hypertension
+    chf: []
+    af: []
+das:
+  min_records_per_hospital: 100
+  k:
+  - 5
+  - 10
+  - 20
+  n_bootstrap: 1000
+  seed: 20261105
+icd:
+  diabetes:
+    icd9: ^(249|250)
+    icd10: ^(E08|E09|E10|E11|E13)
+  hypertension:
+    icd9: ^(401|402|403|404|405)
+    icd10: ^(I10|I11|I12|I13|I15|I16)
+  chf:
+    icd9: ^(428|39891|40201|40211|40291|40401|40403|40411|40413|40491|40493)
+    icd10: ^(I50|I110|I130|I132|I0981)
+  af:
+    icd9: ^(42731|42732)
+    icd10: ^I48

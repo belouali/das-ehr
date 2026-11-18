@@ -1,0 +1,53 @@
+sample,population,task,model,hospitals,sd,sd_lo,sd_hi,mor,mor_lo,mor_hi,converged
+all,all stays,mortality,base,135,0.393826,0.337716,0.459259,1.45596,1.380081,1.549731,True
+all,all stays,mortality,+ das,135,0.373842,0.320016,0.436721,1.428468,1.356976,1.516769,True
+all,all stays,mortality,+ characteristics,135,0.338338,0.287594,0.398034,1.380901,1.315652,1.461817,True
+all,all stays,mortality,+ both,135,0.320999,0.272022,0.378795,1.35825,1.296253,1.435233,True
+all,all stays,A3_los_gt7d,base,135,0.438067,0.375857,0.510574,1.518718,1.431217,1.627476,True
+all,all stays,A3_los_gt7d,+ das,135,0.437519,0.37541,0.509904,1.517925,1.430607,1.626435,True
+all,all stays,A3_los_gt7d,+ characteristics,135,0.383898,0.327333,0.450239,1.442237,1.36648,1.536454,True
+all,all stays,A3_los_gt7d,+ both,135,0.382056,0.325472,0.448477,1.439705,1.364057,1.533874,True
+all,all stays,A6_hospital_los_gt14d,base,135,0.483757,0.417011,0.561187,1.586372,1.488519,1.707976,True
+all,all stays,A6_hospital_los_gt14d,+ das,135,0.478323,0.412238,0.555002,1.57817,1.481757,1.697929,True
+all,all stays,A6_hospital_los_gt14d,+ characteristics,135,0.372619,0.319502,0.434565,1.426803,1.356312,1.513653,True
+all,all stays,A6_hospital_los_gt14d,+ both,135,0.370602,0.317779,0.432206,1.424061,1.354084,1.510251,True
+all,all stays,A7_los_gt5d,base,135,0.387274,0.334438,0.448458,1.446889,1.375773,1.533845,True
+all,all stays,A7_los_gt5d,+ das,135,0.386009,0.333309,0.447041,1.445143,1.374293,1.531774,True
+all,all stays,A7_los_gt5d,+ characteristics,135,0.337872,0.29015,0.393443,1.380288,1.318864,1.455429,True
+all,all stays,A7_los_gt5d,+ both,135,0.336737,0.288996,0.392365,1.378794,1.317412,1.453932,True
+all,survivors,A3_los_gt7d,base,135,0.456514,0.390942,0.533085,1.545679,1.451961,1.6628,True
+all,survivors,A3_los_gt7d,+ das,135,0.456167,0.390653,0.532669,1.545167,1.45156,1.66214,True
+all,survivors,A3_los_gt7d,+ characteristics,135,0.404462,0.343749,0.475898,1.470807,1.388047,1.574524,True
+all,survivors,A3_los_gt7d,+ both,135,0.402103,0.341455,0.473524,1.467501,1.385013,1.570962,True
+all,survivors,A6_hospital_los_gt14d,base,135,0.497947,0.429498,0.577304,1.60799,1.506354,1.734437,True
+all,survivors,A6_hospital_los_gt14d,+ das,135,0.492404,0.42463,0.570995,1.59951,1.499376,1.72403,True
+all,survivors,A6_hospital_los_gt14d,+ characteristics,135,0.397056,0.340996,0.462333,1.460453,1.384407,1.554281,True
+all,survivors,A6_hospital_los_gt14d,+ both,135,0.395534,0.339693,0.460554,1.458334,1.382687,1.551646,True
+all,survivors,A7_los_gt5d,base,135,0.413735,0.357348,0.479018,1.483874,1.40617,1.579218,True
+all,survivors,A7_los_gt5d,+ das,135,0.411941,0.35573,0.477034,1.481337,1.404001,1.576232,True
+all,survivors,A7_los_gt5d,+ characteristics,135,0.362835,0.311322,0.42287,1.413549,1.34577,1.496862,True
+all,survivors,A7_los_gt5d,+ both,135,0.361539,0.310043,0.421589,1.411803,1.344129,1.495033,True
+with_medication,all stays,mortality,base,117,0.383703,0.324518,0.453683,1.441969,1.362816,1.541509,True
+with_medication,all stays,mortality,+ das,117,0.373254,0.315517,0.441556,1.427668,1.351165,1.523781,True
+with_medication,all stays,mortality,+ characteristics,117,0.329564,0.275579,0.394125,1.369392,1.300659,1.456376,True
+with_medication,all stays,mortality,+ both,117,0.316732,0.264135,0.379802,1.352732,1.286538,1.436613,True
+with_medication,all stays,A3_los_gt7d,base,117,0.415282,0.350528,0.491998,1.486065,1.397051,1.598892,True
+with_medication,all stays,A3_los_gt7d,+ das,117,0.414288,0.349639,0.49089,1.484657,1.395868,1.597202,True
+with_medication,all stays,A3_los_gt7d,+ characteristics,117,0.358908,0.300462,0.428723,1.408265,1.331901,1.505242,True
+with_medication,all stays,A3_los_gt7d,+ both,117,0.355847,0.297566,0.425543,1.404158,1.328226,1.500682,True
+with_medication,all stays,A6_hospital_los_gt14d,base,117,0.483237,0.41153,0.567439,1.585585,1.480756,1.718193,True
+with_medication,all stays,A6_hospital_los_gt14d,+ das,117,0.480458,0.409104,0.564258,1.581388,1.477334,1.712987,True
+with_medication,all stays,A6_hospital_los_gt14d,+ characteristics,117,0.36019,0.303763,0.427098,1.409987,1.336101,1.50291,True
+with_medication,all stays,A6_hospital_los_gt14d,+ both,117,0.359418,0.303146,0.426136,1.408949,1.335315,1.501532,True
+with_medication,all stays,A7_los_gt5d,base,117,0.372887,0.31717,0.438391,1.427168,1.353298,1.519188,True
+with_medication,all stays,A7_los_gt5d,+ das,117,0.371588,0.315975,0.436988,1.4254,1.351756,1.517156,True
+with_medication,all stays,A7_los_gt5d,+ characteristics,117,0.323143,0.27301,0.382482,1.36103,1.297475,1.44029,True
+with_medication,all stays,A7_los_gt5d,+ both,117,0.322144,0.272023,0.3815,1.359734,1.296255,1.438941,True
+all,all stays,icu_readmit,base,135,0.303517,0.251279,0.366615,1.335787,1.270857,1.418655,True
+all,all stays,icu_readmit,+ das,135,0.288102,0.237014,0.350202,1.316289,1.253681,1.396617,True
+all,all stays,icu_readmit,+ characteristics,135,0.227402,0.182879,0.282764,1.242239,1.190586,1.309604,True
+all,all stays,icu_readmit,+ both,135,0.222585,0.178217,0.277999,1.236545,1.185304,1.303666,True
+with_medication,all stays,icu_readmit,base,117,0.315495,0.25831,0.38534,1.351137,1.279409,1.444221,True
+with_medication,all stays,icu_readmit,+ das,117,0.298382,0.242487,0.367162,1.32926,1.260243,1.419395,True
+with_medication,all stays,icu_readmit,+ characteristics,117,0.237069,0.188437,0.298251,1.253747,1.196915,1.329095,True
+with_medication,all stays,icu_readmit,+ both,117,0.23034,0.182322,0.291004,1.245725,1.189954,1.319938,True

@@ -1,0 +1,159 @@
+description: eICU drughiclseqno codes counted as medication evidence, whether or not the drug name is filled in (the
+  paper's drug lists). Built by scripts/68_eicu_hicl_list.py.
+hicl:
+  diabetes:
+    768: Insulin
+    780: Humulin N
+    802: Glyburide
+    803: Glipizide
+    4763: Metformin Hcl
+    6215: Humulin
+    8283: Precose
+    9690: Glucovance
+    10485: Glimepiride
+    11528: Insulin Lispro
+    12257: Glynase
+    17915: Prandin
+    19949: Humalog Mix
+    20324: Actos
+    20769: Novolog
+    21859: Starlix
+    22025: Lantus
+    23400: Novolog Mix
+    26407: Insulin Detemir
+    32893: Byetta
+    33152: Insulin Glulisine
+    33202: Actoplus Met
+    34126: Januvia
+    34665: Janumet
+    36436: Victoza
+    36471: Onglyza
+    37246: Kombiglyze Xr
+    37576: Tradjenta
+    38451: Bydureon
+    38464: Jentadueto
+    40171: Invokana
+  hypertension:
+    91: Prazosin Hcl
+    93: Minoxidil
+    94: Terazosin Hcl
+    113: Clonidine Hcl
+    118: Methyldopa
+    120: Intuniv
+    128: Captopril
+    130: Enalapril Maleate
+    131: Lisinopril-Hydrochlorothiazide
+    132: Lisinopril
+    147: Atenolol/Chlorthalidone
+    180: Verapamil Er
+    181: Nifedipine
+    182: Diltiazem
+    2900: Aldactazide
+    2901: Spironolactone
+    3647: Triamterene-Hctz
+    3648: Amiloride Hcl/Hydrochlorothiaz
+    3649: Hydrochlorothiazide
+    3662: Chlorthalidone
+    3665: Indapamide
+    3666: Triamterene
+    3667: Amiloride Hcl
+    6031: Doxazosin Mesylate
+    6080: Ramipril
+    6106: Fosinopril Sodium
+    6113: Benazepril Hcl
+    6205: Felodipine
+    6494: Amlodipine Besylate
+    7631: Quinapril Hcl
+    8268: Sular
+    8715: Ziac
+    8962: Benazepril Hcl/Hydrochlorothia
+    8991: Mavik
+    9829: Losartan Potassium
+    9863: Hyzaar
+    9934: Moexipril Hcl
+    10041: Lotrel
+    12204: Diovan
+    13911: Aceon
+    15576: Avapro
+    16913: Candesartan Cilexetil
+    17084: Diovan Hct
+    18839: Micardis
+    18963: Avalide
+    23490: Benicar
+    24316: Eplerenone
+    25446: Benicar Hct
+    25951: Caduet
+    26810: Diltiazem
+    34433: Exforge
+    34493: Tekturna
+    34632: Spironolactone
+    35042: Azor
+    35805: Clonidine Hcl
+    36550: Clonidine
+    37444: Edarbi
+  chf:
+    4: Digoxin
+    128: Captopril
+    130: Enalapril Maleate
+    131: Lisinopril-Hydrochlorothiazide
+    132: Lisinopril
+    2900: Aldactazide
+    2901: Spironolactone
+    3660: Furosemide
+    3664: Bumetanide
+    6080: Ramipril
+    6106: Fosinopril Sodium
+    6323: Metoprolol Succinate
+    7396: Bisoprolol Fumarate
+    7631: Quinapril Hcl
+    8715: Ziac
+    8829: Torsemide
+    8991: Mavik
+    9829: Losartan Potassium
+    9863: Hyzaar
+    12204: Diovan
+    13237: Enalaprilat
+    13795: Carvedilol
+    13911: Aceon
+    15576: Avapro
+    16913: Candesartan Cilexetil
+    17084: Diovan Hct
+    18963: Avalide
+    24316: Eplerenone
+    34245: Carvedilol
+    34433: Exforge
+    34632: Spironolactone
+  af:
+    4: Digoxin
+    82: Flecainide Acetate
+    83: Amiodarone
+    180: Verapamil Er
+    182: Diltiazem
+    2812: Warfarin Sodium
+    4791: Sotalol
+    4833: Propafenone Hcl
+    17793: Amiodarone
+    20864: Tikosyn
+    26810: Diltiazem
+    35604: Pradaxa
+    35915: Xarelto
+    36444: Multaq
+    37678: Nexterone
+    37792: Eliquis
+excluded:
+  885: enteral feeds
+  920: two named rows, different drugs
+  1694: morphine
+  2159: unrelated drugs under one code
+  2807: heparin flush
+  2854: unrelated drugs under one code
+  3441: apraclonidine eye drops (matches 'clonidine')
+  3770: lactose (matches 'actos')
+  13633: unrelated drugs under one code
+  18084: unrelated drugs under one code
+  20334: insulin administration supplies
+  23037: insulin syringe
+  23038: insulin syringe
+  23041: insulin syringe
+  24100: insulin syringe
+  35487: insulin pump

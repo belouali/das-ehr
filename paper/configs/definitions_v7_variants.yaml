@@ -1,0 +1,21 @@
+variants:
+  origmeds:
+    description: "Original medication classes: nothing removed on specificity grounds. Heparin and enoxaparin count for AF; loop diuretics and metolazone for hypertension; hydralazine and isosorbide dinitrate each count alone for heart failure; bromocriptine and colesevelam for diabetes; insulin ordered for hyperkalemia counts. The corrections stay (whole-word matching, drug codes, brand names, no metoprolol tartrate for heart failure)."
+    diabetes: {set: {remove: [], name_exclude: "insulin syringe|pen needle|insulin admin"}}
+    hypertension: {set: {remove: []}}
+    chf: {set: {remove: [], combination: null}, add_extra: [apresoline, isordil, dilatrate]}
+    af: {set: {remove: [rhythmol]}}
+  nobb:
+    description: "Hypertension and AF without beta-blockers; hypertension also without the as-needed intravenous agents (hydralazine, labetalol, nicardipine, clevidipine, enalaprilat)."
+    hypertension:
+      remove_extra: [metoprolol, lopressor, toprol, atenolol, tenormin, tenoretic, propranolol, inderal, carvedilol, coreg, bisoprolol, zebeta, ziac, labetalol, trandate, nebivolol, bystolic, nadolol, corgard,
+                     hydralazine, apresoline, bidil, nicardipine, cardene, clevidipine, cleviprex]
+      set: {name_exclude: "enalaprilat"}
+    af:
+      remove_extra: [metoprolol, lopressor, toprol, atenolol, tenormin, tenoretic, propranolol, inderal, carvedilol, coreg, bisoprolol, zebeta, ziac]
+  noloop:
+    description: "Heart failure without loop diuretics."
+    chf: {remove_extra: [furosemide, lasix, bumetanide, bumex, torsemide, demadex]}
+  strict:
+    description: "Heart failure: hydralazine with isosorbide dinitrate as separate orders counts only when recorded stop times show the overlap."
+    chf: {combination_strict: true}

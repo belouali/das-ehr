@@ -1,0 +1,8 @@
+S_site_selection_iecv:
+  status: locked
+  seed: 20261125
+  step2_screening:
+    rule: "the candidate with the largest pooled gain is locked if its 95% CI lower bound is above zero"
+S_das_variation:
+  status: locked
+  seed: 20261125
