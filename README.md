@@ -24,9 +24,9 @@ DAS runs from 0° (the same spread of evidence) to 90° (no lobe in common).
 
 4. Mean DAS, the main measure in the paper, averages the condition angles over the conditions both hospitals have:
 
-$$\overline{\mathrm{DAS}}(i,j) = \frac{1}{|C_{ij}|}\sum_{c \in C_{ij}} \mathrm{DAS}_c(i,j)$$
+$$\text{mean DAS}(i,j) = \frac{1}{|C_{ij}|}\sum_{c \in C_{ij}} \mathrm{DAS}_c(i,j)$$
 
-where $C_{ij}$ is the set of conditions with a DAS at both hospitals.
+where $C_{ij}$ is the set of conditions with a DAS at both hospitals. Mean DAS is not itself an angle between two vectors. It is the average of the condition angles, in degrees, and serves as a summary distance between hospitals.
 
 Because the angle does not depend on scale, a site can share its seven counts per condition instead of shares.
 
